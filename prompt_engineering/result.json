@@ -1,0 +1,1942 @@
+{
+    "P_BMX": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "BMDBMIC": {
+                "short_description": "BMI Category - Children/Youth",
+                "lookup": {
+                    "3": "Overweight",
+                    "4": "Obese",
+                    ".": "Missing",
+                    "1": "Underweight",
+                    "2": "Normal weight"
+                }
+            },
+            "BMDSTATS": {
+                "short_description": "Body Measures Component Status Code",
+                "lookup": {
+                    "3": "Other partial exam",
+                    "4": "No body measures exam data",
+                    ".": "Missing",
+                    "1": "Complete data for age group",
+                    "2": "Partial:  Only height and weight obtained"
+                }
+            },
+            "BMIARMC": {
+                "short_description": "Arm Circumference Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIARML": {
+                "short_description": "Upper Arm Length Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIHEAD": {
+                "short_description": "Head Circumference Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIHIP": {
+                "short_description": "Hip Circumference Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIHT": {
+                "short_description": "Standing Height Comment",
+                "lookup": {
+                    "3": "Not straight",
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMILEG": {
+                "short_description": "Upper Leg Length Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIRECUM": {
+                "short_description": "Recumbent Length Comment",
+                "lookup": {
+                    "3": "Not straight",
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIWAIST": {
+                "short_description": "Waist Circumference Comment",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMIWT": {
+                "short_description": "Weight Comment",
+                "lookup": {
+                    "3": "Clothing",
+                    "4": "Medical appliance",
+                    ".": "Missing",
+                    "1": "Could not obtain"
+                }
+            },
+            "BMXARMC": {
+                "short_description": "Arm Circumference (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "11.2",
+                "max": "64.5"
+            },
+            "BMXARML": {
+                "short_description": "Upper Arm Length (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "9.4",
+                "max": "49.9"
+            },
+            "BMXBMI": {
+                "short_description": "Body Mass Index (kg/m**2)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "11.9",
+                "max": "92.3"
+            },
+            "BMXHEAD": {
+                "short_description": "Head Circumference (cm) ",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "32.4",
+                "max": "48.3"
+            },
+            "BMXHIP": {
+                "short_description": "Hip Circumference (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "62.5",
+                "max": "187.5"
+            },
+            "BMXHT": {
+                "short_description": "Standing Height (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "78.3",
+                "max": "199.6"
+            },
+            "BMXLEG": {
+                "short_description": "Upper Leg Length (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "24.8",
+                "max": "55"
+            },
+            "BMXRECUM": {
+                "short_description": "Recumbent Length (cm) ",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "49.1",
+                "max": "113.9"
+            },
+            "BMXWAIST": {
+                "short_description": "Waist Circumference (cm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "40",
+                "max": "187.5"
+            },
+            "BMXWT": {
+                "short_description": "Weight (kg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "3.2",
+                "max": "254.3"
+            },
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            }
+        }
+    },
+    "P_DEMO": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "deps": [],
+        "user_generated": false,
+        "columns": {
+            "AIALANGA": {
+                "short_description": "Language of ACASI Interview",
+                "lookup": {
+                    "3": "Asian languages",
+                    ".": "Missing",
+                    "1": "English",
+                    "2": "Spanish"
+                }
+            },
+            "DMDBORN4": {
+                "short_description": "Country of birth",
+                "lookup": {
+                    "99": "Don't Know",
+                    ".": "Missing",
+                    "77": "Refused",
+                    "1": "Born in 50 US states or Washington, DC",
+                    "2": "Others"
+                }
+            },
+            "DMDEDUC2": {
+                "short_description": "Education level - Adults 20+",
+                "lookup": {
+                    "7": "Refused",
+                    "9": "Don't Know",
+                    "1": "Less than 9th grade",
+                    "5": "College graduate or above",
+                    "2": "9-11th grade (Includes 12th grade with no diploma)",
+                    "3": "High school graduate/GED or equivalent",
+                    "4": "Some college or AA degree",
+                    ".": "Missing"
+                }
+            },
+            "DMDMARTZ": {
+                "short_description": "Marital status",
+                "lookup": {
+                    "99": "Don't Know",
+                    "3": "Never married",
+                    "77": "Refused",
+                    ".": "Missing",
+                    "1": "Married/Living with Partner",
+                    "2": "Widowed/Divorced/Separated"
+                }
+            },
+            "DMDYRUSZ": {
+                "short_description": "Length of time in US",
+                "lookup": {
+                    "99": "Don't Know",
+                    "77": "Refused",
+                    "1": "Less than 5 years",
+                    "2": "5 years or more, but less than 15 years",
+                    "3": "15 years or more, but less than 30 years",
+                    "4": "30 years or more",
+                    ".": "Missing"
+                }
+            },
+            "FIAINTRP": {
+                "short_description": "Interpreter used in Family Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "FIALANG": {
+                "short_description": "Language of Family Interview",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "English",
+                    "2": "Spanish"
+                }
+            },
+            "FIAPROXY": {
+                "short_description": "Proxy used in Family Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "INDFMPIR": {
+                "short_description": "Ratio of family income to poverty",
+                "lookup": {
+                    ".": "Missing",
+                    "5": "Value greater than or equal to 5.00"
+                },
+                "min": "0",
+                "max": "4.98"
+            },
+            "MIAINTRP": {
+                "short_description": "Interpreter used in MEC Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MIALANG": {
+                "short_description": "Language of MEC Interview",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "English",
+                    "2": "Spanish"
+                }
+            },
+            "MIAPROXY": {
+                "short_description": "Proxy used in MEC Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "RIAGENDR": {
+                "short_description": "Gender",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Male",
+                    "2": "Female"
+                }
+            },
+            "RIDAGEMN": {
+                "short_description": "Age in months at screening - 0 to 24 mos",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0",
+                "max": "24"
+            },
+            "RIDAGEYR": {
+                "short_description": "Age in years at screening ",
+                "lookup": {
+                    "80": "80 years of age and over",
+                    ".": "Missing"
+                },
+                "min": "0",
+                "max": "79"
+            },
+            "RIDEXMON": {
+                "short_description": "Six-month time period",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "November 1 through April 30",
+                    "2": "May 1 through October 31"
+                }
+            },
+            "RIDEXPRG": {
+                "short_description": "Pregnancy status at exam",
+                "lookup": {
+                    "3": "Cannot ascertain if the participant is pregnant at exam",
+                    ".": "Missing",
+                    "1": "Yes, positive lab pregnancy test or self-reported pregnant at exam",
+                    "2": "The participant was not pregnant at exam"
+                }
+            },
+            "RIDRETH1": {
+                "short_description": "Race/Hispanic origin",
+                "lookup": {
+                    "3": "Non-Hispanic White",
+                    "4": "Non-Hispanic Black",
+                    ".": "Missing",
+                    "1": "Mexican American",
+                    "5": "Other Race - Including Multi-Racial",
+                    "2": "Other Hispanic"
+                }
+            },
+            "RIDRETH3": {
+                "short_description": "Race/Hispanic origin w/ NH Asian",
+                "lookup": {
+                    "7": "Other Race - Including Multi-Racial",
+                    "1": "Mexican American",
+                    "6": "Non-Hispanic Asian",
+                    "2": "Other Hispanic",
+                    "3": "Non-Hispanic White",
+                    "4": "Non-Hispanic Black",
+                    ".": "Missing"
+                }
+            },
+            "RIDSTATR": {
+                "short_description": "Interview/Examination status",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Interviewed only",
+                    "2": "Both interviewed and MEC examined"
+                }
+            },
+            "SDDSRVYR": {
+                "short_description": "Data release cycle",
+                "lookup": {
+                    ".": "Missing",
+                    "66": "NHANES 2017-2020 public release"
+                }
+            },
+            "SDMVPSU": {
+                "short_description": "Masked variance pseudo-PSU",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "1",
+                "max": "3"
+            },
+            "SDMVSTRA": {
+                "short_description": "Masked variance pseudo-stratum",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "149",
+                "max": "172"
+            },
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            },
+            "SIAINTRP": {
+                "short_description": "Interpreter used in SP Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "SIALANG": {
+                "short_description": "Language of SP Interview",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "English",
+                    "2": "Spanish"
+                }
+            },
+            "SIAPROXY": {
+                "short_description": "Proxy used in SP Interview?",
+                "lookup": {
+                    ".": "Missing",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "WTINTPRP": {
+                "short_description": "Full sample interview weight",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "1017.784203",
+                "max": "338363.60019"
+            },
+            "WTMECPRP": {
+                "short_description": "Full sample MEC exam weight",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0",
+                "max": "367555.74298"
+            }
+        }
+    },
+    "P_DSQTOT": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "DSD010": {
+                "short_description": "Any Dietary Supplements Taken?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "DSD010AN": {
+                "short_description": "Any Antacids Taken?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "DSDANCNT": {
+                "short_description": "Total # of Antacids Taken",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "0",
+                "max": "3"
+            },
+            "DSDCOUNT": {
+                "short_description": "Total # of Dietary Supplements Taken",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "0",
+                "max": "20"
+            },
+            "DSQTCAFF": {
+                "short_description": "Caffeine (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "2",
+                "max": "1200"
+            },
+            "DSQTCALC": {
+                "short_description": "Calcium (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.18",
+                "max": "3750"
+            },
+            "DSQTCARB": {
+                "short_description": "Carbohydrate (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.0005",
+                "max": "254.5"
+            },
+            "DSQTCHL": {
+                "short_description": "Total choline (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.0003",
+                "max": "666.6667"
+            },
+            "DSQTCHOL": {
+                "short_description": "Cholesterol (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.1",
+                "max": "250"
+            },
+            "DSQTCOPP": {
+                "short_description": "Copper (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.0002",
+                "max": "7.05"
+            },
+            "DSQTFA": {
+                "short_description": "Folic acid (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "1",
+                "max": "16000"
+            },
+            "DSQTFDFE": {
+                "short_description": "Folate, DFE (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "2",
+                "max": "27200"
+            },
+            "DSQTFIBE": {
+                "short_description": "Dietary fiber (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.003",
+                "max": "26"
+            },
+            "DSQTIODI": {
+                "short_description": "Iodine (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.4",
+                "max": "12500"
+            },
+            "DSQTIRON": {
+                "short_description": "Iron (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.002",
+                "max": "260"
+            },
+            "DSQTKCAL": {
+                "short_description": "Energy (kcal)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.1",
+                "max": "1270"
+            },
+            "DSQTLYCO": {
+                "short_description": "Lycopene (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "8",
+                "max": "100000"
+            },
+            "DSQTLZ": {
+                "short_description": "Lutein + zeaxanthin (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "2",
+                "max": "48000"
+            },
+            "DSQTMAGN": {
+                "short_description": "Magnesium (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.08",
+                "max": "3390"
+            },
+            "DSQTMFAT": {
+                "short_description": "Total monounsaturated fatty acids (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.01",
+                "max": "6"
+            },
+            "DSQTNIAC": {
+                "short_description": "Niacin (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.1",
+                "max": "1520"
+            },
+            "DSQTPFAT": {
+                "short_description": "Total polyunsaturated fatty acids (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.01",
+                "max": "12"
+            },
+            "DSQTPHOS": {
+                "short_description": "Phosphorus (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.67",
+                "max": "1403"
+            },
+            "DSQTPOTA": {
+                "short_description": "Potassium (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.01",
+                "max": "6750"
+            },
+            "DSQTPROT": {
+                "short_description": "Protein (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.002",
+                "max": "67"
+            },
+            "DSQTSELE": {
+                "short_description": "Selenium (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.02",
+                "max": "2100"
+            },
+            "DSQTSFAT": {
+                "short_description": "Total saturated fatty acids (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.0001",
+                "max": "15"
+            },
+            "DSQTSODI": {
+                "short_description": "Sodium (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.01",
+                "max": "1820"
+            },
+            "DSQTSUGR": {
+                "short_description": "Total sugars (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.02",
+                "max": "24"
+            },
+            "DSQTTFAT": {
+                "short_description": "Total fat (gm)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.004",
+                "max": "27"
+            },
+            "DSQTVB1": {
+                "short_description": "Thiamin (Vitamin B1) (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.001",
+                "max": "251.5"
+            },
+            "DSQTVB12": {
+                "short_description": "Vitamin B12 (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.02",
+                "max": "10002"
+            },
+            "DSQTVB2": {
+                "short_description": "Riboflavin (Vitamin B2) (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.001",
+                "max": "401.7"
+            },
+            "DSQTVB6": {
+                "short_description": "Vitamin B6 (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.01",
+                "max": "500"
+            },
+            "DSQTVC": {
+                "short_description": "Vitamin C (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.33",
+                "max": "30000"
+            },
+            "DSQTVD": {
+                "short_description": "Vitamin D (D2 + D3) (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.004",
+                "max": "2570"
+            },
+            "DSQTVK": {
+                "short_description": "Vitamin K (mcg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.1",
+                "max": "7000"
+            },
+            "DSQTZINC": {
+                "short_description": "Zinc (mg)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.0001",
+                "max": "450"
+            },
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            }
+        }
+    },
+    "P_MCQ": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "AGQ030": {
+                "short_description": "Did SP have episode of hay fever/past yr",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCD093": {
+                "short_description": "Year receive blood transfusion",
+                "lookup": {
+                    "3": "1992 to present",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Before 1972",
+                    ".": "Missing",
+                    "2": "1972 - 1991"
+                }
+            },
+            "MCD180F": {
+                "short_description": "Age when told you had a stroke",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "17",
+                "max": "79"
+            },
+            "MCD180M": {
+                "short_description": "Age when told you had thyroid problem",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "17",
+                "max": "79"
+            },
+            "MCD180b": {
+                "short_description": "Age when told you had heart failure",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "18",
+                "max": "79"
+            },
+            "MCD180c": {
+                "short_description": "Age when told had coronary heart disease",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "20",
+                "max": "79"
+            },
+            "MCD180d": {
+                "short_description": "Age when told you had angina pectoris",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "20",
+                "max": "79"
+            },
+            "MCD180e": {
+                "short_description": "Age when told you had heart attack",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "19",
+                "max": "79"
+            },
+            "MCD180l": {
+                "short_description": "Age when told you had a liver condition",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "16": "16 years or younger",
+                    "99999": "Don't know"
+                },
+                "min": "17",
+                "max": "79"
+            },
+            "MCQ010": {
+                "short_description": "Ever been told you have asthma",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ025": {
+                "short_description": "Age when first had asthma",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "99999": "Don't know"
+                },
+                "min": "1",
+                "max": "79"
+            },
+            "MCQ035": {
+                "short_description": "Still have asthma",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ040": {
+                "short_description": "Had asthma attack in past year",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ050": {
+                "short_description": "Emergency care visit for asthma/past yr",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ053": {
+                "short_description": "Taking treatment for anemia/past 3 mos",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ080": {
+                "short_description": "Doctor ever said you were overweight",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ092": {
+                "short_description": "Ever receive blood transfusion",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ145": {
+                "short_description": "BOX 7.  CHECK ITEM MCQ145:  IF SP'S AGE >= 20, GO TO MCQ.160.\r\nIF SP's AGE = 12-19, GO TO MCQ500.\r\nIF SP AGE 8-11 AND SP IS FEMALE, CONTINUE.\r\nOTHERWISE, GO TO MCQ300b.",
+                "lookup": {}
+            },
+            "MCQ149": {
+                "short_description": "Menstrual periods started yet?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ151": {
+                "short_description": "Age in years at first menstrual period",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "7",
+                "max": "11"
+            },
+            "MCQ160a": {
+                "short_description": "Doctor ever said you had arthritis",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160b": {
+                "short_description": "Ever told had congestive heart failure",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160c": {
+                "short_description": "Ever told you had coronary heart disease",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160d": {
+                "short_description": "Ever told you had angina/angina pectoris",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160e": {
+                "short_description": "Ever told you had heart attack",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160f": {
+                "short_description": "Ever told you had a stroke",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160l": {
+                "short_description": "Ever told you had any liver condition",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160m": {
+                "short_description": "Ever told you had thyroid problem",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ160p": {
+                "short_description": "Ever told you had COPD, emphysema, ChB",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ170l": {
+                "short_description": "Do you still have a liver condition",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ170m": {
+                "short_description": "Do you still have thyroid problem",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ195": {
+                "short_description": "Which type of arthritis was it?",
+                "lookup": {
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Osteoarthritis or degenerative arthritis",
+                    "2": "Rheumatoid arthritis",
+                    "3": "Psoriatic arthritis",
+                    "4": "Other",
+                    ".": "Missing"
+                }
+            },
+            "MCQ220": {
+                "short_description": "Ever told you had cancer or malignancy",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ230a": {
+                "short_description": "1st cancer - what kind was it?",
+                "lookup": {
+                    "37": "Thyroid",
+                    "31": "Rectum (rectal)",
+                    "17": "Esophagus (esophageal)",
+                    "16": "Colon",
+                    "35": "Stomach",
+                    "19": "Kidney",
+                    "66": "More than 3 kinds",
+                    "34": "Soft tissue (muscle or fat)",
+                    "99": "Don't know",
+                    "13": "Brain",
+                    "22": "Liver",
+                    "24": "Lymphoma/ Hodgkin's disease",
+                    "14": "Breast",
+                    "12": "Bone",
+                    ".": "Missing",
+                    "30": "Prostate",
+                    "29": "Pancreas (pancreatic)",
+                    "26": "Mouth/tongue/lip",
+                    "10": "Bladder",
+                    "15": "Cervix (cervical)",
+                    "38": "Uterus (uterine)",
+                    "32": "Skin (non-melanoma)",
+                    "25": "Melanoma",
+                    "28": "Ovary (ovarian)",
+                    "18": "Gallbladder",
+                    "23": "Lung",
+                    "33": "Skin (don't know what kind)",
+                    "11": "Blood",
+                    "77": "Refused",
+                    "39": "Other",
+                    "36": "Testis (testicular)",
+                    "21": "Leukemia",
+                    "20": "Larynx/ windpipe",
+                    "27": "Nervous system"
+                }
+            },
+            "MCQ230b": {
+                "short_description": "2nd cancer - what kind was it?",
+                "lookup": {
+                    "37": "Thyroid",
+                    "31": "Rectum (rectal)",
+                    "17": "Esophagus (esophageal)",
+                    "16": "Colon",
+                    "35": "Stomach",
+                    "19": "Kidney",
+                    "66": "More than 3 kinds",
+                    "34": "Soft tissue (muscle or fat)",
+                    "99": "Don't know",
+                    "13": "Brain",
+                    "22": "Liver",
+                    "24": "Lymphoma/ Hodgkins disease",
+                    "14": "Breast",
+                    "12": "Bone",
+                    ".": "Missing",
+                    "30": "Prostate",
+                    "29": "Pancreas (pancreatic)",
+                    "26": "Mouth/tongue/lip",
+                    "10": "Bladder",
+                    "15": "Cervix (cervical)",
+                    "38": "Uterus (uterine)",
+                    "32": "Skin (non-melanoma)",
+                    "25": "Melanoma",
+                    "28": "Ovary (ovarian)",
+                    "18": "Gallbladder",
+                    "23": "Lung",
+                    "33": "Skin (don't know what kind)",
+                    "11": "Blood",
+                    "77": "Refused",
+                    "39": "Other",
+                    "36": "Testis (testicular)",
+                    "21": "Leukemia",
+                    "20": "Larynx/ windpipe",
+                    "27": "Nervous system"
+                }
+            },
+            "MCQ230c": {
+                "short_description": "3rd cancer - what kind was it?",
+                "lookup": {
+                    "37": "Thyroid",
+                    "31": "Rectum (rectal)",
+                    "17": "Esophagus (esophageal)",
+                    "16": "Colon",
+                    "35": "Stomach",
+                    "19": "Kidney",
+                    "66": "More than 3 kinds",
+                    "34": "Soft tissue (muscle or fat)",
+                    "99": "Don't know",
+                    "13": "Brain",
+                    "22": "Liver",
+                    "24": "Lymphoma/ Hodgkins disease",
+                    "14": "Breast",
+                    "12": "Bone",
+                    ".": "Missing",
+                    "30": "Prostate",
+                    "29": "Pancreas (pancreatic)",
+                    "26": "Mouth/tongue/lip",
+                    "10": "Bladder",
+                    "15": "Cervix (cervical)",
+                    "38": "Uterus (uterine)",
+                    "32": "Skin (non-melanoma)",
+                    "25": "Melanoma",
+                    "28": "Ovary (ovarian)",
+                    "18": "Gallbladder",
+                    "23": "Lung",
+                    "33": "Skin (don't know what kind)",
+                    "11": "Blood",
+                    "77": "Refused",
+                    "39": "Other",
+                    "36": "Testis (testicular)",
+                    "21": "Leukemia",
+                    "20": "Larynx/ windpipe",
+                    "27": "Nervous system"
+                }
+            },
+            "MCQ230d": {
+                "short_description": "More than 3 kinds of cancer",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused",
+                    "66": "More than 3 kinds"
+                }
+            },
+            "MCQ300a": {
+                "short_description": "Close relative had heart attack?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ300b": {
+                "short_description": "Close relative had asthma?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ300c": {
+                "short_description": "Close relative had diabetes?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ366a": {
+                "short_description": "Doctor told you to control/lose weight",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ366b": {
+                "short_description": "Doctor told you to exercise",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ366c": {
+                "short_description": "Doctor told you to reduce salt in diet",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ366d": {
+                "short_description": "Doctor told you to reduce fat/calories",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ371a": {
+                "short_description": "Are you now controlling or losing weight",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ371b": {
+                "short_description": "Are you now increasing exercise",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ371c": {
+                "short_description": "Are you now reducing salt in diet",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ371d": {
+                "short_description": "Are you now reducing fat in diet",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ500": {
+                "short_description": "Ever told you had any liver condition",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ510a": {
+                "short_description": "Liver condition: Fatty liver",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused",
+                    "1": "Fatty liver"
+                }
+            },
+            "MCQ510b": {
+                "short_description": "Liver condition: Liver fibrosis",
+                "lookup": {
+                    ".": "Missing",
+                    "2": "Liver fibrosis"
+                }
+            },
+            "MCQ510c": {
+                "short_description": "Liver condition: Liver cirrhosis",
+                "lookup": {
+                    "3": "Liver cirrhosis",
+                    ".": "Missing"
+                }
+            },
+            "MCQ510d": {
+                "short_description": "Liver condition: Viral hepatitis",
+                "lookup": {
+                    "4": "Viral hepatitis",
+                    ".": "Missing"
+                }
+            },
+            "MCQ510e": {
+                "short_description": "Liver condition: Autoimmune hepatitis",
+                "lookup": {
+                    ".": "Missing",
+                    "5": "Autoimmune hepatitis"
+                }
+            },
+            "MCQ510f": {
+                "short_description": "Liver condition: Other liver disease",
+                "lookup": {
+                    ".": "Missing",
+                    "6": "Other liver disease"
+                }
+            },
+            "MCQ515": {
+                "short_description": "BOX 8C CHECK ITEM MCQ515: IF SP'S AGE 12-19, GO TO MCQ300B.\r\nOTHERWISE, IF SP'S AGE >= 20 GO TO MCQ520.",
+                "lookup": {}
+            },
+            "MCQ520": {
+                "short_description": "Abdominal pain during past 12 months?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ530": {
+                "short_description": "Where was the most uncomfortable pain",
+                "lookup": {
+                    "3": "Left upper abdomen",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Right upper abdomen",
+                    ".": "Missing",
+                    "2": "Mid upper abdomen"
+                }
+            },
+            "MCQ540": {
+                "short_description": "Ever seen a DR about this pain",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ550": {
+                "short_description": "Has DR ever said you have gallstones",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ560": {
+                "short_description": "Ever had gallbladder surgery?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "MCQ570": {
+                "short_description": "Age when 1st had gallbladder surgery?",
+                "lookup": {
+                    "80": "80 years or older",
+                    ".": "Missing",
+                    "77777": "Refused",
+                    "99999": "Don't know"
+                },
+                "min": "2",
+                "max": "79"
+            },
+            "OSQ230": {
+                "short_description": "Any metal objects inside your body?",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "RHD018": {
+                "short_description": "Estimated age in months at menarche",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "86",
+                "max": "142"
+            },
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            }
+        }
+    },
+    "P_PAQ": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "PAD615": {
+                "short_description": "Minutes vigorous-intensity work",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "10",
+                "max": "840"
+            },
+            "PAD630": {
+                "short_description": "Minutes moderate-intensity work",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "10",
+                "max": "900"
+            },
+            "PAD645": {
+                "short_description": "Minutes walk/bicycle for transportation",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "10",
+                "max": "840"
+            },
+            "PAD660": {
+                "short_description": "Minutes vigorous recreational activities",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "10",
+                "max": "480"
+            },
+            "PAD675": {
+                "short_description": "Minutes moderate recreational activities",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "10",
+                "max": "600"
+            },
+            "PAD680": {
+                "short_description": "Minutes sedentary activity",
+                "lookup": {
+                    "7777": "Refused",
+                    "9999": "Don't know",
+                    ".": "Missing"
+                },
+                "min": "0",
+                "max": "1320"
+            },
+            "PAQ605": {
+                "short_description": "Vigorous work activity",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "PAQ610": {
+                "short_description": "Number of days vigorous work",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "1",
+                "max": "7"
+            },
+            "PAQ620": {
+                "short_description": "Moderate work activity",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "PAQ625": {
+                "short_description": "Number of days moderate work",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "1",
+                "max": "7"
+            },
+            "PAQ635": {
+                "short_description": "Walk or bicycle",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "PAQ640": {
+                "short_description": "Number of days walk or bicycle",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "1",
+                "max": "7"
+            },
+            "PAQ650": {
+                "short_description": "Vigorous recreational activities",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "PAQ655": {
+                "short_description": "Days vigorous recreational activities",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "1",
+                "max": "7"
+            },
+            "PAQ665": {
+                "short_description": "Moderate recreational activities",
+                "lookup": {
+                    ".": "Missing",
+                    "7": "Refused",
+                    "9": "Don't know",
+                    "1": "Yes",
+                    "2": "No"
+                }
+            },
+            "PAQ670": {
+                "short_description": "Days moderate recreational activities",
+                "lookup": {
+                    "99": "Don't know",
+                    ".": "Missing",
+                    "77": "Refused"
+                },
+                "min": "1",
+                "max": "7"
+            },
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            }
+        }
+    },
+    "P_UM": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            },
+            "URDUBALC": {
+                "short_description": "Urinary Barium Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUCDLC": {
+                "short_description": "Urinary Cadmium Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUCOLC": {
+                "short_description": "Urinary Cobalt Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUCSLC": {
+                "short_description": "Urinary Cesium Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUMNLC": {
+                "short_description": "Urinary Mn Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUMOLC": {
+                "short_description": "Urinary Molybdenum Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUPBLC": {
+                "short_description": "Urinary Lead Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUSBLC": {
+                "short_description": "Urinary Antimony Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUSNLC": {
+                "short_description": "USN Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUTLLC": {
+                "short_description": "Urinary Thallium Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URDUTULC": {
+                "short_description": "Urinary Tungsten Comment Code",
+                "lookup": {
+                    "0": "At or above the detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URXUBA": {
+                "short_description": "Barium, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.059",
+                "max": "92.612"
+            },
+            "URXUCD": {
+                "short_description": "Cadmium, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.039",
+                "max": "7.581"
+            },
+            "URXUCO": {
+                "short_description": "Cobalt, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.017",
+                "max": "32.377"
+            },
+            "URXUCS": {
+                "short_description": "Cesium, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.223",
+                "max": "33.27"
+            },
+            "URXUMN": {
+                "short_description": "Manganese, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.092",
+                "max": "11.844"
+            },
+            "URXUMO": {
+                "short_description": "Molybdenum, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.93",
+                "max": "665.23"
+            },
+            "URXUPB": {
+                "short_description": "Lead, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.021",
+                "max": "19.34"
+            },
+            "URXUSB": {
+                "short_description": "Antimony, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.016",
+                "max": "4.285"
+            },
+            "URXUSN": {
+                "short_description": "Tin, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.14",
+                "max": "132.29"
+            },
+            "URXUTL": {
+                "short_description": "Thallium, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.013",
+                "max": "1.492"
+            },
+            "URXUTU": {
+                "short_description": "Tungsten, urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.013",
+                "max": "29.4"
+            },
+            "WTSAPRP": {
+                "short_description": "Subsample A Weights Pre-Pandemic",
+                "lookup": {
+                    "0": "No Lab Specimen",
+                    ".": "Missing"
+                },
+                "min": "2395.195359",
+                "max": "955677.30961"
+            }
+        }
+    },
+    "P_UTAS": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "SEQN": {
+                "short_description": "Respondent sequence number",
+                "lookup": {}
+            },
+            "URDUASLC": {
+                "short_description": "Arsenic, Total - Urine Comment Code",
+                "lookup": {
+                    "0": "At or above detection limit",
+                    ".": "Missing",
+                    "1": "Below lower detection limit"
+                }
+            },
+            "URXUAS": {
+                "short_description": "Arsenic, Total - Urine (ug/L)",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0.16",
+                "max": "2802.29"
+            },
+            "WTSAPRP": {
+                "short_description": "Subsample A Weights Pre-Pandemic",
+                "lookup": {
+                    "0": "No Lab Specimen",
+                    ".": "Missing"
+                },
+                "min": "2395.195359",
+                "max": "955677.30961"
+            }
+        }
+    },
+    "dataset_1": {
+        "tableName": "Patient",
+        "description": "Patient personal information",
+        "columns": {
+            "7w2m7LCF8jhUO71AC2Y3": {
+                "description": "Date of birth of the patient in format YYYY-MM-DD",
+                "name": "dateOfBirth"
+            },
+            "uoFeOuXZ5CAfkKORcYIo": {
+                "description": "Gender of the participant",
+                "lookUp": {
+                    "1": "Male",
+                    "2": "Female"
+                },
+                "name": "Gender"
+            }
+        }
+    },
+    "table_name_TEMPLATE": {
+        "long_description": "as;lkfdja; \\n lkdsjfa;lksjfd;laksjdf;lajsfd;ljds;lfkajsdf;lkjsa;dfkj;fljdsa;lkfjsa;ldkjfa;sd",
+        "sql_code": "SELECT * from ur_mom;",
+        "short_description": "xxx",
+        "user_generated": false,
+        "columns": {
+            "COL_NAME": {
+                "description": "bla bla bla \\n lolol",
+                "min": 0,
+                "max": 100
+            }
+        }
+    },
+    "test_dataset": {
+        "long_description": "xxxx",
+        "short_description": "xxxx",
+        "user_generated": false,
+        "columns": {
+            "RIDAGEMN": {
+                "description": "Age in months of the participant at the time of screening. Reported for persons aged 24 months or younger at the time of exam (or screening if not examined).",
+                "max": "24",
+                "lookup": {
+                    ".": "Missing"
+                },
+                "min": "0",
+                "name": "RIDAGEMN"
+            }
+        }
+    }
+}

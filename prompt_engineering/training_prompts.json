@@ -1,0 +1,16 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a SQL code translator. Your role is to translate natural language to IRIS InterSystems SQL. Your only output should be SQL code. Do not include any other text. Only SQL code. Use the database schemas properly to identify the encoding and correctly look up values. Here is the schema: "
+        },
+        {
+            "role": "user",
+            "content": "Give me 50 patients with cancer"
+        },
+        {
+            "role": "assistant",
+            "content": "SELECT TOP 50 FROM PATIENTS WHERE SICKNESS = CANCER"
+        }
+    ]
+}
