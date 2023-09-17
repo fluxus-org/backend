@@ -1,101 +1,44 @@
-"""prompt.py provides helpers for preparing Postgres query prompts."""
+import openai
+import firebase_admin
+from firebase_admin import credentials, firestore
 
-import typing as t
+schema_dict = {}
+openai.api_key = "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"
 
+def getSchemaFromFirebase():
+  cred = credentials.Certificate("fluxus-cd802-firebase-adminsdk-77hzw-44c6ecda5b.json")
+  firebase_admin.initialize_app(cred)
 
-def get_default_prompt(
-    text: str,
-    db_schema: t.Dict[t.Any, t.Any],
-    include_types: bool = True,
-) -> str:
-    """Construct a Postgres query prompt from natural text and a db schema.
-    
-    See pg_text_query.db_schema.py for the expected schema data format and a
-    utility for extracting schema data in that format from an existing Postgres
-    database.
+  db = firestore.client()
+  tables = db.collection('tables').stream()
 
-    The prompt requests and provides an arbitrary "SELECT 1" query, in addition
-    to the actual text request. This is a naive, baseline approach that has 
-    been useful for hinting to the model that we want a raw SQL completion, as
-    opposed to more SQL comments.
+  for table in tables:
+    table_dict = table.to_dict()
+    columns = table.reference.collection(u"columns").stream()
+    col_data = []
+    for column in columns:
+      col_dict = column.to_dict()
+      col_data.append(col_dict)
+    table_dict["columns"] = col_data
+    schema_dict[table.id] = table_dict
+  
+def human_text_to_sql(query):
+  """Convert a human-readable text to SQL using OpenAI API."""
+  print("Your query is ", query)
+  response = openai.Completion.create(
+    engine="text-davinci-003",
+    prompt=f""""You are a SQL code translator. Your role is to translate natural language to PostgreSQL. Your only output should be SQL code. Do not include any other text. Only SQL code. 
+    Translate \"{query}\" to a syntactically-correct PostgreSQL query. Here are the schemas for all our databases \"{schema_dict}\"""",
+    max_tokens=50
+  )
 
-    This default prompt is provided for convenience, use concat_prompt and 
-    describe_database to build custom prompts.
-    """
-    return concat_prompt(
-        f"-- Language PostgreSQL",
-        describe_database(db_schema, include_types),
-        f"-- A PostgreSQL query to return 1 and a PostgreSQL query for {text}",
-        "SELECT 1;",
-    )
+  # Extract the SQL command from the response
+  sql_command = response.choices[0].text.strip()
+  print("Response is ", response)
+  return sql_command
 
-def get_custom_prompt(
-        task_prompt: str,
-        user_prompt: str,
-        db_schema: t.Dict[t.Any, t.Any],
-        include_schema: bool = True,
-        include_types: bool = True,
-        add_select_1: bool = True,
-        ) -> str:
-    """construct a Postgres query prompt from a task prompt, user prompt, and db schema.
-
-    See pg_text_query.db_schema.py for the expected schema data format and a
-    utility for extracting schema data in that format from an existing Postgres
-    database.
-
-    All prompts currently start with "--Language PostgreSQL" and the schema, if
-    included, follows this language specification line.
-
-    Include a space or newline at the end of task_prompt depending on whether you want
-    the user_prompt on a new line.
-    """
-    task_user_prompt = task_prompt + user_prompt
-    
-    prompt_components = ["-- Language PostgreSQL\n",
-                         describe_database(db_schema, include_types) if include_schema else '',
-                         task_user_prompt,
-                         ]
-    if add_select_1:
-        prompt_components.append("SELECT 1;")
-    
-    return concat_prompt(*prompt_components)
-
-        
-
-
-def concat_prompt(*args: str) -> str:
-    return "\n".join(args)
-
-
-def _describe_cols(cols: t.List[t.Dict[t.Any, t.Any]], include_types: bool) -> str:
-    return ", ".join(
-        [f"{c['name']}{' ' + c['data_type'] if include_types else ''}" for c in cols]
-    )
-
-
-def _describe_table(schema_name: str, table_name: str) -> str:
-    return f'"{table_name}"' if schema_name == "public" else f'"{schema_name}"."{table_name}"'
-
-
-def _describe_schema(schema: t.Dict[t.Any, t.Any], include_types: bool = True) -> str:
-    return "\n".join(
-        [
-            f"-- Table = {_describe_table(schema['name'], t['name'])}, columns = [{_describe_cols(t['columns'], include_types)}]"
-            for t in schema["tables"]
-        ]
-    )
-
-
-def describe_database(
-    db_schema: t.Dict[t.Any, t.Any], include_types: bool = True
-) -> str:
-    """Describes a database schema with SQL comments per Codex docs example.
-    
-    Ref: https://platform.openai.com/docs/guides/code/best-practices
-    """
-    return "\n".join(
-        [
-            _describe_schema(s, include_types=include_types)
-            for s in db_schema["schemata"]
-        ]
-    )
+if __name__ == "__main__":
+  getSchemaFromFirebase();
+  human_query = input("Enter your English sentence: ")
+  sql_result = human_text_to_sql(human_query)
+  print(f"SQL command: {sql_result}")
