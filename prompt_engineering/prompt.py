@@ -67,8 +67,14 @@ def get_necessary_schemes(human_query):
 
   return response
 
-def human_text_to_sql(query):
+def human_text_to_sql(query, needed_schemes):
   """Convert a human-readable text to SQL using OpenAI API."""
+  query_tables = {}
+  for table in schema_dict:
+    if table in needed_schemes.toArray():
+      query_tables[table] = schema_dict[table]
+      print("\n\nTable name : %s \n"% (table))
+  print("AFTER ALL ", query_tables)
   messages = [
       {
           "role": "system",
@@ -76,7 +82,7 @@ def human_text_to_sql(query):
       },
       {
           "role": "user",
-          "content": f"Translate \"{query}\" to a syntactically-correct PostgreSQL query. Here are the schemas for all our databases \"{schema_dict}\". "
+          "content": f"Translate \"{query}\" to a syntactically-correct PostgreSQL query. Here are the schemas for all our databases \"{query_tables}\". "
       }
   ]
 
@@ -114,7 +120,7 @@ if __name__ == "__main__":
 
   print("NEEDED SCHEMES ARE ", needed_schemes)
   print("HUMAN QUERY IS ", human_query)
-  sql_result = human_text_to_sql(human_query)
+  sql_result = human_text_to_sql(human_query, needed_schemes)
   print (sql_result)
   fail_count = 0
   while testSql(sql_result) == False and fail_count < 3:
