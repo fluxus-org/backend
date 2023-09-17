@@ -93,7 +93,7 @@
 # @tab_bp.route("/addTable/", methods=["POST"])
 # def update_deps():
 #     user_input = request.json.get('prompt', None)
-    
+
 #     if user_input is None:
 #         return jsonify({"error": "No input provided"}), 400
 
@@ -108,6 +108,7 @@
 from flask import Blueprint, jsonify, request
 from ..config import Config
 from flask_cors import cross_origin
+from ..ml import llm
 
 cursor = Config.cursor
 tab_col = Config.tab_col
@@ -116,7 +117,7 @@ tab_bp = Blueprint("tables", __name__)
 
 
 @tab_bp.route("/list", methods=["GET"])
-@cross_origin()
+# @cross_origin()
 def get_tables():
     cursor.execute(
         "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'"
@@ -151,15 +152,32 @@ def delete_table(table_name):
 
     return jsonify({"message": f"Table {table_name} deleted successfully"})
 
+
+@tab_bp.route("/add", methods=["GET"])
 @cross_origin()
-@tab_bp.route("/addTable/", methods=["POST"])
-def update_deps():
-    user_input = request.json.get('prompt', None)
-    
+def add_table_llm():
+    user_input = request.args.get("prompt", None)
+
     if user_input is None:
         return jsonify({"error": "No input provided"}), 400
 
-    return jsonify({"damn": "test"})
+    table_name, sql = llm.create_table(user_input)
+
+    return jsonify({"name": table_name, "sql": sql})
+
+
+@cross_origin()
+@tab_bp.route("/test", methods=["POST"])
+def post_test():
+    return request.json
+
+
+@cross_origin()
+@tab_bp.route("/wtf", methods=["GET"])
+def get_test():
+    params = request.args
+    print(params)
+    return jsonify(params)
 
 
 # from celery import Celery

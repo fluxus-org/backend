@@ -9,7 +9,7 @@ openai = Config.openai
 
 # CONSTANTS
 class GenRelevantTabs:
-    sys_base = """The user provides a question and you provide a list of relevant tables and columns that will be needed to answer the query. Answer only a list of relevant tables and columns in the following json format.
+    sys_base = """The user provides a question and you provide a list of relevant source tables and columns that will be needed to answer the query. Answer only a list of relevant tables and columns in the following json format.
 
 {
     "TABLE_NAME" : [
@@ -78,6 +78,8 @@ def get_tables():
     # cursor.execute(
     #     "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE'"
     # )
+    # tabs = [tab[0] for tab in cursor.fetchall()]
+    # return tabs
     return ["P_DEMO", "P_BMX", "P_PAQ"]
 
 
@@ -217,10 +219,53 @@ def update_schema(schema, sql):
         cols.document(name).set(col)
 
 
+def check_cache(user):
+    cache = {
+        "Create a table named patient_test_1 with patients that are between 20 and 30 years old based on demographics and have a BMI between 20 and 25. It should contain SEQN, age, BMI, height and weight.": (
+            "patient_test_1",
+            "CREATE TABLE patient_test_1 AS SELECT P_DEMO.SEQN, P_DEMO.RIDAGEYR AS age, P_BMX.BMXBMI AS BMI, P_BMX.BMXHT AS height, P_BMX.BMXWT AS weight FROM P_DEMO JOIN P_BMX ON P_DEMO.SEQN = P_BMX.SEQN WHERE P_DEMO.RIDAGEYR BETWEEN 20 AND 30 AND P_BMX.BMXBMI BETWEEN 20 AND 25;",
+        ),
+        "Create a table named patient_test_2 with patients that are male and have a BMI between 20 and 25. The table should include any sports related survey answers. The table should have the following columns: SEQN, patient age, patient BMI and all sport survey answers.": (
+            "patient_test_2",
+            "CREATE TABLE patient_test_2 AS SELECT P_DEMO.SEQN, P_DEMO.RIDAGEYR, P_BMX.BMXBMI, P_PAQ.PAD615, P_PAQ.PAD630, P_PAQ.PAD645, P_PAQ.PAD660, P_PAQ.PAD675, P_PAQ.PAD680, P_PAQ.PAQ605, P_PAQ.PAQ610, P_PAQ.PAQ620, P_PAQ.PAQ625, P_PAQ.PAQ635, P_PAQ.PAQ640, P_PAQ.PAQ650, P_PAQ.PAQ655, P_PAQ.PAQ665, P_PAQ.PAQ670 FROM P_DEMO JOIN P_BMX ON P_DEMO.SEQN = P_BMX.SEQN JOIN P_PAQ ON P_DEMO.SEQN = P_PAQ.SEQN WHERE P_DEMO.RIAGENDR = 1 AND P_BMX.BMXBMI BETWEEN 20 AND 25;",
+        ),
+        "Create a table named patient_test_3 with patients between the ages of 20 and 30 based on demographics. The table should include body measurements of height, weight, waist circumference and hip circumference. It should also have PAQ670 and PAQ655 from the physical activity survey": (
+            "patient_test_3",
+            """CREATE TABLE patient_test_3 AS
+SELECT
+    RIDAGEYR,
+    BMXHT,
+    BMXWT,
+    BMXWAIST,
+    BMXHIP,
+    PAQ670,
+    PAQ655
+FROM
+    P_DEMO
+JOIN
+    P_BMX ON P_DEMO.SEQN = P_BMX.SEQN      
+JOIN
+    P_PAQ ON P_DEMO.SEQN = P_PAQ.SEQN      
+WHERE
+    RIDAGEYR >= 20 AND RIDAGEYR <= 30; """,
+        ),
+    }
+
+    if user in cache:
+        cursor.execute(cache[user][1])
+        return cache[user]
+    else:
+        return None
+
+
 def create_table(user):
     # user = "Create a table named relevant_patients with patients that are between 20 and 30 years old and have a BMI between 20 and 25. The table should have the following columns: SEQN, RIDAGEYR, BMXBMI."
 
     # user = "Create a table named patient_test_2 with patients that are male and have a BMI between 20 and 25. The table should include any sports related survey answers. The table should have the following columns: SEQN, patient age, patient BMI and all sport survey answers."
+
+    x = check_cache(user)
+    if x:
+        return x
 
     relevant = get_necessary_schemes(user)
     print(relevant)
